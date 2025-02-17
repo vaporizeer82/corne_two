@@ -17,6 +17,19 @@
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
 };
 
+//&kscan0{
+//        compatible = "zmk,soft-off-wakeup-sources";
+//        wakeup-sources:
+//    type: phandles
+//    required: true
+//    description: List of wakeup-sources that should be enabled to wake the system from forced soft-off state.
+//}
+
+&zmk_soft_off_wakeup_sources {
+    wakeup-sources = <&kscan0>;
+};
+
+
 / {
         keymap {
                 compatible = "zmk,keymap";
