@@ -15,6 +15,7 @@
 
 &soft_off {
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
+    wakeup-source;
 };
 
 //&kscan0{
@@ -25,9 +26,6 @@
 //    description: List of wakeup-sources that should be enabled to wake the system from forced soft-off state.
 //}
 
-&zmk_soft_off_wakeup_sources {
-    wakeup-sources = <&kscan0>;
-};
 
 
 / {
