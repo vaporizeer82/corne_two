@@ -15,7 +15,10 @@
 
 &soft_off {
     hold-time-ms = <3000>; // Only turn off it the key is held for 3 seconds or longer.
-    wakeup-source;
+};
+
+&zmk_soft_off_wakeup_sources {
+    wakeup-sources = <&kscan0>;
 };
 
 //&kscan0{
